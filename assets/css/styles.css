@@ -434,6 +434,14 @@ button {
    }
 
 /*=============== CHOOSE ===============*/
+
+
+.choose {
+	padding-bottom: 0;
+}
+.choose-content .section-data {
+	margin-bottom: 2rem;
+}
 .section-title {
     display: flex;
     gap: 1rem;
@@ -444,8 +452,26 @@ button {
 
 .choose-description {
     text-align: center;
+    color: var(--first-color);
 }
 
+.choose-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    justify-items: center;
+    padding-top: 3rem;
+}
+
+.choose-number {
+	font-size: var(--h1-font-size);
+	font-family: var(--second-font);
+	font-weight: 400;
+	margin-bottom: .25rem;
+}
+.choose-subtitle {
+	font-size: var(--small-font-size);
+}
 /*=============== PRICING ===============*/
 
 
