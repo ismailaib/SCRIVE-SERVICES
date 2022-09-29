@@ -1,0 +1,443 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+  
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: hsl(79, 6%, 64%);
+  --title-color: hsl(180, 4%, 98%);
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: hsl(180, 4%, 72%);
+  --text-color-light: hsl(180, 4%, 65%);
+  --body-color:linear-gradient(150deg, #4b5a8b 0%, #cea0f1 50%, #cea0f1 50%, #333863 100%);;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Red Hat Display', sans-serif;
+  --second-font: 'Kaushan Script', cursive;
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --big-font-size: 2.7rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-bold: 700;
+  --font-black: 900;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 6rem;
+    --bigger-font-size: 3.5rem;
+    --big-font-size: 2.75rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1124px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__data {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section__title, 
+.section__title-border {
+  font-size: var(--big-font-size);
+  letter-spacing: 1.5px;
+}
+
+.section__subtitle {
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: var(--first-color);
+  transform: rotate(-2deg);
+}
+
+.section__titles {
+  display: flex;
+  column-gap: .75rem;
+  justify-content: center;
+}
+
+.section__title-border {
+  -webkit-text-stroke: 1px var(--text-color);
+  color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+.color-red {
+  color: hsl(0, 80%, 64%);
+}
+
+.color-green {
+  color: var(--first-color);
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+	width: 100%;
+	background-color: transparent;
+	position:fixed;
+	top: 0;
+	left: 0;
+	z-index: var(--z-fixed);
+	transition: background .3s;
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+}
+
+.nav-logo,
+.nav-toggle {
+  color: var(--title-color);
+  display: flex;
+}
+
+.nav-logo {
+	align-items: center;
+	column-gap: .5rem;
+	font-weight: var(--font-bold);
+}
+.nav-logo img {
+	width: 2.25rem;
+}
+
+.nav-toggle {
+	font-size: 1.25rem;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+	.nav-menu {
+		position: fixed;
+		background-color: hsla(180, 12%, 8%, .8);
+		backdrop-filter : blur(32px) ; 
+		-webkit-backdrop-filter : blur(32px);
+		top: 0;
+		right:-100%;
+		width: 80%;
+		height: 100%;
+		border-left: 2px solid var(--first-color-gray);
+		transition: right .3s;
+	}
+}
+
+.nav-list {
+    padding: 5rem 0 0 0rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    align-items: center;
+}
+.nav-link {
+	color: var(--title-color);
+	transition: color .3s;
+}
+
+.nav-link:hover {
+	color: var(--first-color);
+}
+
+.nav-close {
+    position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+	font-size: 1.5rem;
+	color: var(--title-color);
+	cursor: pointer;
+}
+/* Show menu */
+.show-menu {
+	right: 0;
+}
+
+/* Change background header */
+
+.bg-header {
+	background: #2b2b2b6c;
+	backdrop-filter: blur(32px);
+}
+/* Active link */
+
+
+/*=============== HOME ===============*/
+
+.home {
+	padding-bottom: 0;
+}
+
+.home-container {
+	padding-top: 4rem;
+	row-gap: 3rem;
+}
+
+.home-data {
+	text-align: center;
+}
+.home-subtitle {
+	font-size: var(--big-font-size);
+	-webkit-text-stroke: 1px var(--title-color);
+	color: transparent;
+}
+
+.home-title {
+	font-size: var(--big-font-size);
+	font-weight: var(--font-black);
+	margin: .5rem 0;
+}
+.home-subtitle,
+.home-title {
+	letter-spacing: 1.5px;
+}
+.home-description {
+	margin-bottom: 2.5rem;
+	color: var(--first-color);
+}
+
+/*=============== BUTTON ===============*/
+
+
+/* From uiverse.io by @adamgiebl */
+button {
+	background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+	background-size: 800% 400%;
+	padding: 1em 2em;
+	display: inline-block;
+	border: none;
+	border-radius: 10px;
+	font-size: 17px;
+	font-weight: 700;
+	color: white;
+	transition: all .5s ease-in-out;
+	animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+   }
+   
+   button:hover {
+	animation: gradient 3s infinite;
+	transform: scale(1.05);
+   }
+   
+   button:active {
+	animation: gradient 3s infinite;
+	transform: scale(0.8);
+   }
+   
+   @keyframes gradient {
+	0% {
+	 background-position: 0% 50%;
+	}
+   
+	50% {
+	 background-position: 100% 50%;
+	}
+   
+	100% {
+	 background-position: 0% 50%;
+	}
+   }
+/*=============== LOGOS ===============*/
+/* From uiverse.io by @alexmaracinaru */
+.card {
+	width: 100%;
+    height: 20rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    overflow: visible;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+   }
+   
+   .card .item {
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+   }
+   
+   .item:hover {
+	transform: scale(0.95);
+	transition: all 0.3s;
+   }
+   
+   .item svg {
+	width: 40px;
+	height: 40px;
+	margin-bottom: 7px;
+   }
+   
+   .item--1 {
+	background: #c7c7ff;
+   }
+   
+   .item--2 {
+	background: #ffd8be;
+   }
+   
+   .item--3 {
+	background: #a9ecbf;
+   }
+   
+   .item--4 {
+	background: #f3bbe1;
+   }
+   
+   .quantity {
+	font-size: 25px;
+	font-weight: 600;
+   }
+   
+   .text {
+	font-size: 12px;
+	font-family: inherit;
+	font-weight: 600;
+   }
+   
+   .text--1 {
+	color: rgba(149,149,255,1);
+   }
+   
+   .text--2 {
+	color: rgba(252,161,71,1);
+   }
+   
+   .text--3 {
+	color: rgba(66,193,110,1);
+   }
+   
+   .text--4 {
+	color: rgba(220,91,183,1);
+   }
+
+/*=============== PROGRAM ===============*/
+
+
+/*=============== CHOOSE ===============*/
+
+
+/*=============== PRICING ===============*/
+
+
+/*=============== CALCULATE ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
