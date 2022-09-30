@@ -16,8 +16,10 @@
   --title-color-black: hsl(180, 4%, 12%);
   --text-color: hsl(180, 4%, 72%);
   --text-color-light: hsl(180, 4%, 65%);
-  --body-color:linear-gradient(150deg, #4b5a8b 0%, #cea0f1 50%, #cea0f1 50%, #333863 100%);;
+  --body-color: linear-gradient( 109.2deg,  rgba(107,52,255,1) 16.5%, rgba(51,159,247,1) 81% );
 
+
+  
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Red Hat Display', sans-serif;
@@ -46,7 +48,7 @@
   :root {
     --biggest-font-size: 6rem;
     --bigger-font-size: 3.5rem;
-    --big-font-size: 2.75rem;
+    --big-font-size: 4.75rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -77,6 +79,9 @@ input {
 body {
   background: var(--body-color);
   color: var(--text-color);
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2bb1ff 52%, #ab6ae9 90%);
+  
 }
 
 h1, h2, h3 {
@@ -90,6 +95,8 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--title-color);
+  transition: all 300ms ease;
 }
 
 img {
@@ -123,22 +130,22 @@ img {
 }
 
 .section__subtitle {
-  font-size: var(--h2-font-size);
-  font-family: var(--second-font);
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  font-family: Dancing Script;
   color: var(--first-color);
-  transform: rotate(-2deg);
+  font-size: var(--h1-font-size);
 }
 
 .section__titles {
   display: flex;
-  column-gap: .75rem;
+  gap: 6rem;
+  align-items: center;
+  font-size: var(--h1-font-size);
+  text-align: center;
   justify-content: center;
 }
 
 .section__title-border {
-  -webkit-text-stroke: 1px var(--text-color);
+  -webkit-text-stroke: 1px var(--title-color);
   color: transparent;
 }
 
@@ -224,7 +231,7 @@ img {
 }
 .nav-link {
 	color: var(--title-color);
-	transition: color .3s;
+	transition: all .3s ease;
 }
 
 .nav-link:hover {
@@ -267,23 +274,25 @@ img {
 	text-align: center;
 }
 .home-subtitle {
-	font-size: var(--big-font-size);
-	-webkit-text-stroke: 1px var(--title-color);
-	color: transparent;
+  font-size: var(--big-font-size);
+  -webkit-text-stroke: 1px var(--title-color);
+  color: transparent;
 }
 
 .home-title {
-	font-size: var(--big-font-size);
-	font-weight: var(--font-black);
-	margin: .5rem 0;
+  font-size: var(--big-font-size);
+  font-weight: var(--font-black);
+  margin: 0.5rem 0;
 }
 .home-subtitle,
 .home-title {
 	letter-spacing: 1.5px;
 }
 .home-description {
-	margin-bottom: 2.5rem;
-	color: var(--first-color);
+  margin-bottom: 3.5rem;
+  color: hsl(0deg 80% 64%);
+  font-size: var(--h2-font-size);
+  padding: 0 5rem 0 5rem;
 }
 
 /*=============== BUTTON ===============*/
@@ -326,8 +335,6 @@ button {
 	 background-position: 0% 50%;
 	}
    }
-/*=============== LOGOS ===============*/
-
 
 /*=============== PROGRAM ===============*/
 .prog {
@@ -339,13 +346,12 @@ button {
 }
 .programme {
   width: 80%;
-  height: 8rem;
+  height: 12rem;
   background: rgb(40,40,55);
-  background: linear-gradient(416deg, #567be269 22%, hsl(313deg 43% 35% / 37%) 69%);
-  box-shadow: -1px 5px 50px -1px #ffffff;
+  background: rgb(40 40 55 / 41%);
+  /* box-shadow: -1px 0px 34px -1px #ffffff; */
   border-radius: 3px;
   color: #F9F9F9;
-  padding: 1;
   transition: all .3s;
   display: flex;
   justify-content: center;
@@ -355,8 +361,7 @@ button {
  }
  
  .programme:hover {
-  width: 85%;
-  height: 9rem;
+
  }
  
  .programme .title {
@@ -368,7 +373,10 @@ button {
 }
 
 .programme .title  img {
-  width: 2rem;
+  width: 4rem;
+}
+.content p {
+  font-size: var(--h2-font-size);
 }
 /*=============== CHOOSE ===============*/
 
@@ -381,12 +389,11 @@ button {
 }
 
 .section-data {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    padding-bottom: 1rem;
-    letter-spacing: rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-bottom: 3rem;
+  align-items: center;
 }
 .section-subtitle {
 	font-family: Dancing Script;
@@ -404,28 +411,28 @@ button {
     color: transparent;
 }
 .card {
-	width: 100%;
-    height: 20rem;
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    overflow: visible;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+  width: 100%;
+  height: 20rem;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  overflow: visible;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  justify-items: center;
    }
    
    .card .item {
-	border-radius: 10px;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
    }
    
    .item:hover {
@@ -440,19 +447,19 @@ button {
    }
    
    .item--1 {
-	background: #c7c7ff;
+    background: hsl(180deg 12% 8% / 23%);
    }
    
    .item--2 {
-	background: #ffd8be;
+    background: hsl(180deg 12% 8% / 23%);
    }
    
    .item--3 {
-	background: #a9ecbf;
+    background: hsl(180deg 12% 8% / 23%);
    }
    
    .item--4 {
-	background: #f3bbe1;
+    background: hsl(180deg 12% 8% / 23%);
    }
    
    .quantity {
@@ -483,13 +490,268 @@ button {
    }
 
 /*=============== PRICING ===============*/
+.price-card {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.prices-card {
+  width: 70%;
+  height: 20rem;
+  display: flex;
+  background: #2b2b2b;
+  box-shadow: 0px 0px 20px rgb(255 255 255 / 20%);
+  transition-duration: 0.5s;
+  flex-direction: column;
+  align-items: center;
+  /* grid-template-columns: 50% 50%; */
+  justify-content: center;
+}
 
-
+ .title {
+  text-align: center;
+  margin-top: 0.5em;
+  font-weight: bold;
+  font-size: x-large;
+  color: rgb(200,200,200);
+ }
+ 
+ .pricecontainer {
+  width: 100%;
+  margin-top: 0.7em;
+  background: linear-gradient( 109.2deg, rgb(56 34 112) 16.5%, rgb(38 75 104) 81% );
+  box-shadow: inset 0px 0px 2em rgb(0 0 0 / 30%);
+ }
+ .price {
+  text-align: center;
+  color: rgb(180,180,180);
+  font-size: x-large;
+  font-weight: bold;
+  padding: 0.75em 0 0 0;
+ }
+ 
+ .pricedescriptor {
+  text-align: center;
+  color: rgb(118, 118, 118);
+  font-size: medium;
+  padding: 0 0 1em 0;
+ }
+ 
+ .includes {
+  text-align: center;
+  color: rgb(110, 110, 110);
+  margin-top: 0.6em;
+  font-size: small;
+  font-weight: bold;
+ }
+ 
+ .benefitlist li {
+  color: rgb(150,150,150);
+  font-size: small;
+  text-align: center;
+ }
+ 
+ .benefitlist li:nth-child(1) {
+  margin-top: 0.4em;
+ }
+ 
+ .btncontainer {
+  text-align: center;
+ }
+ 
+ .btncontainer button {
+  margin-top: 1em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  border-style: none;
+  border-radius: 1000000px;
+  color: rgb(239, 239, 239);
+  font-weight: bold;
+  background-image: linear-gradient(45deg, #fe4fe1 0%, #3f00fe 100%);
+  transition: box-shadow 0.15s ease-in-out;
+ }
+ 
+ .btncontainer button:hover {
+  box-shadow: inset 0px 0px 5px rgb(0,0,0);
+  transition: box-shadow 0.15s ease-in-out;
+ }
 /*=============== CALCULATE ===============*/
 
 
 /*=============== FOOTER ===============*/
 
+/* From uiverse.io by @mrhyddenn */
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 180px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #070617;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
 
 /*=============== SCROLL BAR ===============*/
 
