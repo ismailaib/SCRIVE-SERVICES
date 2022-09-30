@@ -64,17 +64,43 @@ window.addEventListener('scroll', scrollHeader)
 
 /*=============== EMAIL JS ===============*/
 
-const contactForm = document.getElementById('contact-form'),
- contactMessage = document.getElementById(' contact-message'),
-  contactUser = document.getElementById('contact-user')
-   const sendEmail = (e) =>{
-     e.preventDefault() 
-     
-     // Check if the field has a value 
-     if(contactUser.value === '' ){
-            // Add and remove color
-             contactMessage.classList.remove('color-green') 
-             contactMessage.classList.add('color-red')
-            // Show message M 
-          }
-     }
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.home-subtitle');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.home-subtitle .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 3000,
+    delay: 600
+  }).add({
+    targets: '.home-subtitle',
+    opacity: 0,
+    duration: Infinity,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml10');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml10 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 3000,
+    delay: 600
+  }).add({
+    targets: '.ml10',
+    opacity: 0,
+    duration: Infinity,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
