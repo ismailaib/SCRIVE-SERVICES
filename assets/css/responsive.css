@@ -1,21 +1,88 @@
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media only screen and (max-width: 468px) {
-
+  .ml15 {
+    font-weight: 800;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    padding-bottom: 3rem;
+}
 }
 
 /* For medium devices */
-@media only screen and (max-width: 768px) {
-  .price-card {
-    display: grid;
-    justify-items: center;
-    gap: 2rem;
-    grid-template-columns: 100%;
-    justify-content: center;
+@media screen and (max-width: 768px) {
+	.nav-menu {
+		position: fixed;
+		background-color: hsla(180, 12%, 8%, .8);
+		backdrop-filter : blur(32px) ; 
+		-webkit-backdrop-filter : blur(32px);
+		top: 0;
+		right:-100%;
+		width: 80%;
+		height: 100%;
+		border-left: 2px solid var(--first-color-gray);
+		transition: right .3s;
+	}
+  .nav-list {
+    padding: 5rem 0 0 0rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
     align-items: center;
-    align-content: center;
+}
+#nav-btn,
+.nav-toggle,
+.nav-toggle,
+.nav-close {
+  display: inline;
+}
+
+lottie-player {
+  display: none;
+}
+
+.home-container {
+  padding-top: 2rem;
+  row-gap: 3rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home-data {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  justify-content: center;
+}
+
+.price-card {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.show-menu {
+  right: 0;
+}
+.nav {
+  padding: 0 1rem 0 1rem;
 }
 }
+
 
 /* For large devices */
 @media only screen and (max-width: 1440px) {
