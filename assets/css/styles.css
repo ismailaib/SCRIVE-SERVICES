@@ -270,7 +270,13 @@ img {
 }
 
 .home-data {
-	text-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 .home-subtitle {
   font-size: var(--big-font-size);
@@ -287,23 +293,15 @@ img {
 .home-title {
 	letter-spacing: 1.5px;
 }
-.ml10 {
-  font-weight: 900;
-  font-size: 4em;
+.ml15 {
+  font-weight: 800;
+  font-size: 3.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 
-.ml10 .text-wrapper {
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml10 .letter {
-  display: inline-block;
+.ml15 .word {
   line-height: 1em;
-  transform-origin: 0 0;
 }
 .home-description {
   margin-bottom: 3.5rem;
@@ -519,12 +517,11 @@ button {
   width: 80%;
   height: 20rem;
   display: flex;
-  background: #2b2b2b;
+  background: #ffffff3b;
   box-shadow: 0px 0px 20px rgb(255 255 255 / 20%);
   transition-duration: 0.5s;
   flex-direction: column;
   align-items: center;
-  /* grid-template-columns: 50% 50%; */
   justify-content: center;
 }
 
@@ -539,12 +536,12 @@ button {
  .pricecontainer {
   width: 100%;
   margin-top: 0.7em;
-  background: linear-gradient( 109.2deg, rgb(56 34 112) 16.5%, rgb(38 75 104) 81% );
+  background: hsl(180deg 12% 8% / 23%);
   box-shadow: inset 0px 0px 2em rgb(0 0 0 / 30%);
  }
  .price {
   text-align: center;
-  color: rgb(180,180,180);
+  color: rgb(255, 255, 255);
   font-size: x-large;
   font-weight: bold;
   padding: 0.75em 0 0 0;

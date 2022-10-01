@@ -85,20 +85,16 @@ anime.timeline({loop: false})
     delay: 1000
   });
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml10');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: false})
+anime.timeline({loop: true})
   .add({
-    targets: '.ml10 .letter',
-    scale: [4,1],
+    targets: '.ml15 .word',
+    scale: [14,1],
     opacity: [0,1],
-    translateZ: 0,
     easing: "easeOutExpo",
     duration: 3000,
-    delay: 600
+    delay: 1000
   }).add({
-    targets: '.ml10',
+    targets: '.ml15',
     opacity: 0,
     duration: Infinity,
     easing: "easeOutExpo",
