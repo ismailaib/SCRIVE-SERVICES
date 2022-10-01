@@ -11,7 +11,7 @@
 }
 
 /* For medium devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 884px) {
 	.nav-menu {
 		position: fixed;
 		background-color: hsla(180, 12%, 8%, .8);
