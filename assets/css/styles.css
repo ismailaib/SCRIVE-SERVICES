@@ -253,8 +253,9 @@ lottie-player {
 /*=============== HOME ===============*/
 
 .home {
-	padding-bottom: 0;
+  padding-bottom: 0;
   display: flex;
+  justify-content: center;
 }
 
 .home-container {
