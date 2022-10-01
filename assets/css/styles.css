@@ -77,7 +77,6 @@ input {
 }
 
 body {
-  color: var(--text-color);
   background-image: linear-gradient(45deg, #303136 0%, #303136 52%, #303136 90%);
 }
 
@@ -255,6 +254,7 @@ lottie-player {
 
 .home {
 	padding-bottom: 0;
+  display: flex;
 }
 
 .home-container {
