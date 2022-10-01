@@ -45,7 +45,7 @@ lottie-player {
 .home-container {
   padding-top: 2rem;
   row-gap: 3rem;
-  padding-left: 1rem;
+  padding-left: 0rem;
   display: flex;
   flex-direction: row;
   align-items: center;
