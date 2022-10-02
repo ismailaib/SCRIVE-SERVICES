@@ -54,10 +54,15 @@ var animation = bodymovin.loadinimation({
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
-
 /*=============== CALCULATE JS ===============*/
 
-
+$( '.js-input' ).keyup(function() {
+    if( $(this).val() ) {
+       $(this).addClass('not-empty');
+    } else {
+       $(this).removeClass('not-empty');
+    }
+  });
 
 /*=============== EMAIL JS ===============*/
 
