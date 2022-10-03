@@ -63,6 +63,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 html {
@@ -74,11 +75,25 @@ button,
 input {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  user-select: none;
 }
 
 body {
-  background-image: linear-gradient(45deg, #323335 0%, #2f2f33 52%, #36303b 90%);
-  background: var(--body-color);
+	background: linear-gradient(-45deg, #6d6e6e, #5a5758, #393f41, #383d3c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 h1, h2, h3 {
@@ -89,7 +104,6 @@ h1, h2, h3 {
 ul {
   list-style: none;
 }
-
 a {
   text-decoration: none;
   color: var(--title-color);
@@ -151,7 +165,7 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden; 
 }
 
 .color-red {
@@ -804,8 +818,6 @@ button {
   }
 }
 
-/*=============== SCROLL BAR ===============*/
-
 
 
 /*=============== CALCULATE JS ===============*/
@@ -814,7 +826,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
 }
 .row:after {
   content: "";
@@ -917,6 +929,20 @@ button {
   text-decoration: underline;
 }
 
+/*=============== SCROLL BAR ===============*/
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient( 109.2deg,  rgb(98, 83, 141) 16.5%, rgb(95, 171, 206) 81% );
+  outline: 1px solid rgb(232, 177, 240);
+}
 /*=============== SCROLL UP ===============*/
 
 

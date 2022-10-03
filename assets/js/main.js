@@ -1,3 +1,4 @@
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -64,6 +65,5 @@ $( '.js-input' ).keyup(function() {
     }
   });
 
-/*=============== EMAIL JS ===============*/
 
 
