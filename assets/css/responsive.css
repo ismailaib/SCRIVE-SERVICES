@@ -39,7 +39,7 @@
 }
 
 lottie-player {
-  display: none;
+  display: flex;
 }
 
 .home-container {
