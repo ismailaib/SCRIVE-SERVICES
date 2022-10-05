@@ -67,15 +67,10 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
   margin-inline: 1.5rem;
 }
 
 .main {
-  overflow: hidden;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
   align-items: center; /* For the animations */
 }
 
@@ -174,7 +169,6 @@ img {
   background: var(--body-color);
   box-shadow: 0 2px 4px rgba(238, 238, 238, 0.123);
 }
-
 /*=============== HOME ===============*/
 .home{ 
   position: relative; 

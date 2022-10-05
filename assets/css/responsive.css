@@ -39,7 +39,6 @@
         display: grid;
         grid-template-columns: repeat(2, max-content);
         align-items: center;
-        justify-content: center;
         gap: 2rem 4rem;
     }
     .home-group{
