@@ -37,7 +37,18 @@
     --smaller-font-size: .813rem;
   }
 }
-
+/* SKROLL BAR */
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(51, 49, 49);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(55, 68, 87);
+}
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -50,8 +61,11 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 ul {
   list-style: none;
 }
@@ -72,7 +86,11 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For the animations */
+  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -219,11 +237,14 @@ img {
 .home-img-eth {
   width: 100px;
   justify-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 .home-img-eth img {
   filter: drop-shadow(0 4px 32px hsla(203,71%,60%,.5));
   animation: foat-eth 4s ease-in-out infinite;
+  max-width: 130%;
 }
 
 .home-img-orbe {
