@@ -58,7 +58,7 @@
         margin-bottom: 3rem;
     }
     .home-img-orbe{
-        width: 400px;
+        width: 500px;
     }
     .home-img-eth{
         width: 200px;
@@ -74,33 +74,10 @@
      filter: blur(130px);
     }
     .home-shape-small{
-        width: 300px;
-        height: 300px;
-        top: -5rem;
-        left: -2rem;
-      }
-      .home-shape-big-1,
-      .home-shape-big-2{
-       width: 400px;
-       height: 400px;
-    }
-
-    .home-shape-big-1{
-    background-color: var(--first-color);
-    top: 10rem;
-    right: -3.5rem;
-    }
-
-    .home-shape-big-2{
-    background-color: var(--second-color);
-    bottom: 14rem;
-    left: -10rem;
-    }
+  width: 150px;
+  height: 150px;
+  background-color: var(--first-color);
+  top: -2.5rem;
+  left: -1.5rem;
 }
-
-@media screen and (min-width: 1048px) {
-    .container{
-        margin-inline: auto;
-    }
 }
-
