@@ -1,10 +1,7 @@
-
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close'),
-      themeToggler = document.querySelector(".nav-toggle");
-
+      navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
@@ -35,35 +32,18 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () =>{
-    const header = document.getElementById('nav')
+    const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    this.scrollY >= 50 ? header.classList.add('bg-header') 
-                       : header.classList.remove('bg-header')
+    this.scrollY >= 50 ? header.classList.add('header-bg') 
+                       : header.classList.remove('header-bg')
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-var animation = bodymovin.loadinimation({
-   container: document.getElementById('animcontainer'), 
-   renderer: 'svg', 
-   loop: true, 
-   autoplay: true, 
-   path: "https://assets1.lottiefiles.com/packages/lf20_p4q9ra7d.json" // lottie file path
-})
-/*=============== SHOW SCROLL UP ===============*/ 
-
-
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReaveal({
+    origin : 'bottom',
+    distance : '60px',
+    duration : 2500,
+})
 
-/*=============== CALCULATE JS ===============*/
-
-$( '.js-input' ).keyup(function() {
-    if( $(this).val() ) {
-       $(this).addClass('not-empty');
-    } else {
-       $(this).removeClass('not-empty');
-    }
-  });
-
-
-
+ScrollReveal().reveal('.home-images', {distance: '120px', delay: 400})
