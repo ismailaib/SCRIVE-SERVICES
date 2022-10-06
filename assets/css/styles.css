@@ -50,7 +50,12 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  user-select: none;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -297,14 +302,20 @@ img {
   left: -1.5rem;
 }
 
-.home-shape-big-1{
-  background-color: var(--first-color);
+.home-shape-big-1 {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  background-color: hsl(277deg 56% 68%);
   top: 16rem;
   right: -6.5rem;
 }
 
 .home-shape-big-2{
-  background-color: var(--second-color);
+  position: fixed;
+  width:300px;
+  height: 300px;
+  background-color: var(--first-color);
   bottom: -3.5rem;
   left: -3.5rem;
 }
@@ -330,4 +341,113 @@ img {
   100%{
     transform: translateY(.5rem);
   }
+}
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container{
+      margin-inline: 1rem;
+  }
+
+  .home-img-eth{
+      width: 80px;
+  }
+  .home-img-orbe{
+      width: 230px;
+  }
+  .home-data{
+      right: .5rem;
+  }
+  .home-footer{
+      flex-direction: column;
+      row-gap: 2rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 767px) {
+  .nav{
+      height: calc(var(--header-height) + 1.5rem );
+  }
+  .nav-toggle,
+  .nav-close,
+  .nav-img{
+      display: none;
+  }
+  .nav-list{
+      flex-direction: row;
+      column-gap: 4rem;
+  }
+  .home-container{
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      align-items: center;
+      gap: 2rem 4rem;
+  }
+  .home-group{
+      grid-row: 1/3;
+      grid-column: 2/3;
+      align-self: center;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .home-title {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+  .home-description{
+      margin-bottom: 3rem;
+  }
+  .home-img-orbe{
+      width: 500px;
+  }
+  .home-img-eth{
+      width: 300px;
+  }
+  .home-data{
+      top: 10rem;
+      right: 0;
+      row-gap: 2.5rem;
+  }
+  .home-shape-small,
+  .home-shape-big-1,
+  .home-shape-big-2{
+   filter: blur(130px);
+  }
+  .home-shape-small{
+width: 150px;
+height: 150px;
+background-color: var(--first-color);
+top: -2.5rem;
+left: -1.5rem;
+}
+}
+
+
+/* SKROLL BAR  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(146, 202, 219); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(158, 114, 179); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2b343a; 
 }
