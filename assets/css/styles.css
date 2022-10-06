@@ -382,7 +382,6 @@ img {
       column-gap: 4rem;
   }
   .home-container{
-      height: 100vh;
       display: grid;
       grid-template-columns: repeat(2, max-content);
       align-items: center;

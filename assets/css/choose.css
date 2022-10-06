@@ -1,5 +1,5 @@
 /* From uiverse.io by @alexmaracinaru */
-.choose {
+.choose-crd {
     width: 100%;
     height: fit-content;
     color: white;
@@ -12,7 +12,7 @@
     justify-items: center;
 }
    
-   .choose .item {
+   .choose-crd .item {
     border-radius: 10px;
     width: 80%;
     height: 9rem;
@@ -79,7 +79,7 @@
    }
 
    @media screen and (max-width:475px){
-    .choose {
+    .choose-crd {
         grid-template-columns: 1fr;
     }
    }
