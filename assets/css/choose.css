@@ -1,0 +1,85 @@
+/* From uiverse.io by @alexmaracinaru */
+.choose {
+    width: 100%;
+    height: fit-content;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    overflow: visible;
+    padding: 2rem;
+    justify-items: center;
+}
+   
+   .choose .item {
+    border-radius: 10px;
+    width: 80%;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   
+   .item svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 7px;
+   }
+
+   .item--4 ,
+   .item--1 {
+    background: #c7c7ff;
+    transition: all 300ms ease-in-out;
+   }
+
+   .item--4:hover ,
+   .item--1:hover {
+    background: #8e8ead;
+   }
+
+   .item--3:hover,
+   .item--2:hover {
+    background: #f3bbe1;
+   }
+
+   .item--3,
+   .item--2 {
+    background: #b98fac;
+    transition: all 300ms ease-in-out;
+   }
+   
+   .quantity {
+    font-size: 25px;
+    font-weight: 600;
+   }
+   
+   .text {
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+   }
+   
+   .text--1 {
+    color: rgba(149,149,255,1);
+   }
+   
+   .text--2 {
+    color: rgba(220,91,183,1);
+   }
+   
+   .text--3 {
+    color: rgba(220,91,183,1);
+   }
+   
+   .text--4 {
+    color: rgb(149, 151, 255);
+   }
+
+   @media screen and (max-width:475px){
+    .choose {
+        grid-template-columns: 1fr;
+    }
+   }
