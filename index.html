@@ -12,8 +12,9 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/about.css">
+        <link rel="stylesheet" href="assets/css/services.css">
         <link rel="stylesheet" href="assets/css/choose.css">
+        <link rel="stylesheet" href="assets/css/contact.css">
         <title>SCRIVE SERVICES</title>
     </head>
     <body>
@@ -30,7 +31,7 @@
                             <a href="#" class="nav-link active-link" >Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link">About</a>
+                            <a href="#choose" class="nav-link">Choose us</a>
                         </li>
                         <li class="nav-item">
                             <a href="#Services" class="nav-link">Services</a>
@@ -44,8 +45,6 @@
                     <div class="nav-close" id="nav-close">
                         <i class="ri-close-line"></i>
                     </div>
-
-                    <img src="assets/img/logo.png" alt="nav image" class="nav-img">
                 </div>
 
                 <!-- Toggle button -->
@@ -73,7 +72,8 @@
                         <a href="#about">
                         <button>
                             <span class="text">Explore</span>
-                          </button></a>
+                        </button>
+                        </a>
                     </div>
 
                     <div class="home-group">
@@ -123,18 +123,19 @@
                                     <h3 class="home-footer-number">26</h3>
                                     <span class="home-footer-subtitle">minutes</span>
                                 </div>
-                                <div class="home-footer-counter"  id="choose">
+                                <div class="home-footer-counter"  >
                                     <h3 class="home-footer-number">50</h3>
-                                    <span class="home-footer-subtitle">seconds</span>
+                                    <span class="home-footer-subtitle" id="choose">seconds</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- choose -->
+            <!--==================== CHOOSE ====================-->
+
             
-            <section class="choose">
+            <section class="choose" id="choose">
                 <div class="bridge">
                     <h2>Choose Us</h2>
                     <p>Discover Our career </p>
@@ -161,22 +162,21 @@
                     </div>
                   </div>
             </section>
-            <!-- About -->
-            <section class="about" id="about">
+        <!--==================== SERVICES ====================-->
+        <section class="services" id="Services">
                 <div class="card">
                     <div class="bridge">
-                        <h2>About Us</h2>
-                        <p>Who we are ?</p>
+                        <h2>Services</h2>
+                        <p>Our best Offers</p>
                     </div>
                     <div class="card-container">
+                        <a href="">
                       <article class="card-article">
                           <div class="card-data">
                               <img src="assets/img/img1.png" alt="card image" class="card-img">
-          
                               <h1 class="card-title">SCRIVE SERVICES</h1>
-                              <p class="card-description">Giving you the best services</p>
+                              <p class="card-description">Giving you the best services</p>            
                           </div>
-          
                           <div class="card-shapes">
                               <span class="card-shape"></span>
                               <span class="card-shape"></span>
@@ -188,15 +188,14 @@
                               <span class="card-shape"></span>
                           </div>
                       </article>
-          
+                    </a>
+                      <a href="">
                       <article class="card-article">
                           <div class="card-data">
                               <img src="assets/img/img2.png" alt="card image" class="card-img">
-          
                               <h1 class="card-title">SCRIVE SERVICES</h1>
-                              <p class="card-description">Giving you the best services</p>
+                              <p class="card-description">Giving you the best services</p>   
                           </div>
-          
                           <div class="card-shapes">
                               <span class="card-shape"></span>
                               <span class="card-shape"></span>
@@ -208,15 +207,14 @@
                               <span class="card-shape"></span>
                           </div>
                       </article>
-          
-                      <article class="card-article">
+                    </a>
+                    <a href="">
+                    <article class="card-article">
                           <div class="card-data">
                               <img src="assets/img/img3.png" alt="card image" class="card-img">
-          
                               <h1 class="card-title">SCRIVE SERVICES</h1>
-                              <p class="card-description">Giving you the best services</p>
+                              <p class="card-description">Giving you the best services</p>                     
                           </div>
-          
                           <div class="card-shapes">
                               <span class="card-shape"></span>
                               <span class="card-shape"></span>
@@ -228,9 +226,24 @@
                               <span class="card-shape"></span>
                           </div>
                       </article>
-          
-                      
+                    </a>
                     </div>
+                  </div>
+            </section>
+        <!--==================== CONTACT ====================-->
+            <section class="contact" id="contact">
+                <div class="contact-box">
+                    <h2>Contact</h2>
+                    <form>
+                      <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Username</label>
+                      </div>
+                      <div class="user-box">
+                        <input type="password" name="" required="">
+                        <label>Object</label>
+                      </div>
+                    </form>
                   </div>
             </section>
         <!--=============== SCROLLREVEAL ===============-->

@@ -69,9 +69,13 @@
 
 .card-description {
   font-size: var(--normal-font-size);
+  color: #c9c9c9;
 }
 
 .card-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 10;
 }
@@ -127,6 +131,11 @@
 .card-shape:nth-child(8) {
   animation-delay: .8s;
 }
+
+
+
+ 
+
 /* Animation img */
 @keyframes float-img {
   0% {
