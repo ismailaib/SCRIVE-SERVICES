@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    opacity: 0;
 }
 .bridge h2{
     color: var(--title-color);
@@ -37,11 +38,16 @@
 }
 
 .card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 328px);
+}
+.card-article {
   margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
   padding: 2rem;
+opacity: 0;
 }
 
 .card-article {

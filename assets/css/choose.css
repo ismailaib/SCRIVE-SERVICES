@@ -10,6 +10,7 @@
     overflow: visible;
     padding: 2rem;
     justify-items: center;
+    opacity: 0;
 }
    
    .choose-crd .item {

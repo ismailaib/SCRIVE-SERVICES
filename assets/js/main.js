@@ -40,11 +40,53 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReaveal({
-    origin : 'bottom',
-    distance : '60px',
-    duration : 2500,
-})
+/*=============== MOUSE TRACKER ===============*/
+gsap.set(".ball", {xPercent: -50, yPercent: -50});
 
-ScrollReveal().reveal('.home-images', {distance: '120px', delay: 400})
+let xTo = gsap.quickTo(".ball", "x", {duration: 0.6, ease: "power3"}),
+    yTo = gsap.quickTo(".ball", "y", {duration: 0.6, ease: "power3"});
+
+window.addEventListener("mousemove", e => {
+  xTo(e.pageX);
+  yTo(e.pageY);
+});
+
+/*=============== scroll show bridge ===============*/
+
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.bridge').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},500);
+            }
+        }); 
+    });
+});
+
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.choose-crd').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},600);
+            }
+        }); 
+    });
+});
+
+/*=============== scroll show bridge ===============*/
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.card-article').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},600);
+            }
+        }); 
+    });
+});
+c
