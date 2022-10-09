@@ -39,7 +39,7 @@
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 328px);
+  grid-template-columns: repeat(1, 328px);
 }
 .card-article {
   margin-bottom: 1.5rem;
