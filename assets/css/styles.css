@@ -392,6 +392,9 @@ img {
       grid-column: 2/3;
       align-self: center;
   }
+  .ball {
+    display: inline;
+  }
 }
 
 /* For large devices */
@@ -513,5 +516,6 @@ button .text {
   border: 3px solid rgb(84, 81, 202);
   border-radius: 50%;
   pointer-events: none;
+  display: none;
 }
 

@@ -38,16 +38,11 @@
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(1, 328px);
-}
-.card-article {
   margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
   padding: 2rem;
-opacity: 0;
 }
 
 .card-article {
@@ -58,6 +53,8 @@ opacity: 0;
   text-align: center;
   box-shadow: 0 20px 24px hsla(235, 32%, 15%, .2);
   overflow: hidden;
+  opacity: 0;
+
 }
 
 .card-img {
