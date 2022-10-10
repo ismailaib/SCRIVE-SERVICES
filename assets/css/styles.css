@@ -74,6 +74,7 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   margin-inline: 1.5rem;
+  
 }
 
 .main {
@@ -330,18 +331,6 @@ img {
   mix-blend-mode: soft-light;
   opacity: .3;
 }
-/* Animation ethereum */
-@keyframes foat-eth {
-  0%{
-    transform: translateY(.5rem);
-  }
-  50%{
-    transform: translateY(2rem);
-  }
-  100%{
-    transform: translateY(.5rem);
-  }
-}
 
 
 
@@ -519,3 +508,11 @@ button .text {
   display: none;
 }
 
+.ml2 {
+  font-weight: 900;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}

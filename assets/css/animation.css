@@ -1,0 +1,70 @@
+
+
+.home-footer {
+    position: relative;
+    top: 0;
+    margin-top: 2.5rem;
+    column-gap: 3.5rem;
+    justify-content: center;
+    animation: data;
+    animation-duration: 2s;
+}
+@keyframes data {
+    0% {top: 10rem;}
+    100% {top: 0rem;}
+}
+
+/* Animation ethereum */
+@keyframes foat-eth {
+    0%{
+      transform: translateY(.5rem);
+    }
+    50%{
+      transform: translateY(2rem);
+    }
+    100%{
+      transform: translateY(.5rem);
+    }
+  }
+  
+
+  /* Animation img */
+@keyframes float-img {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-.75rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation shape */
+  .card-article:hover .card-shape {
+    animation-name: shape-animate;
+    animation-duration: .8s;
+    animation-iteration-count: 2;
+  }
+  
+  @keyframes shape-animate {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: .1;
+    }
+    40% {
+      opacity: .3;
+    }
+    60% {
+      opacity: .7;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

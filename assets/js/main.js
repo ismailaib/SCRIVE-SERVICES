@@ -71,7 +71,7 @@ $(document).ready(function() {
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             if( bottom_of_window > bottom_of_object ){
-                $(this).animate({'opacity':'1'},600);
+                $(this).animate({'opacity':'1'},300);
             }
         }); 
     });
@@ -89,4 +89,15 @@ $(document).ready(function() {
         }); 
     });
 });
-c
+/*=============== scroll show bridge ===============*/
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.contact-circle').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},600);
+            }
+        }); 
+    });
+});

@@ -137,48 +137,6 @@
 
 
 
- 
-
-/* Animation img */
-@keyframes float-img {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-.75rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Animation shape */
-.card-article:hover .card-shape {
-  animation-name: shape-animate;
-  animation-duration: .8s;
-  animation-iteration-count: 2;
-}
-
-@keyframes shape-animate {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: .1;
-  }
-  40% {
-    opacity: .3;
-  }
-  60% {
-    opacity: .7;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px){
